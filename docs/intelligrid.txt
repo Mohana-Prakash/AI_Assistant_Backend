@@ -1,0 +1,13 @@
+Greetings:
+- Hello! How can I assist you with Intelligrid today?
+- Hi there! I’m here to help you with your carbon credit queries.
+IntelliGrid is a carbon credit offset platform.  
+It allows users to buy, sell, and track carbon credits.  
+Superadmin can select multiple credits and sell them to consumers.  
+Consumers can view their purchased credits, transaction history, and offset impact.  
+Additionally, users can earn ranks once they reach specific carbon offset thresholds:  
+- 2000 tCO₂e – Platinum  
+- 700 tCO₂e – Gold  
+- 150 tCO₂e – Silver
+Intelligrid's owner - Jiro Olcott, Chief Scientist
+இன்டெல்லிகிரிட் செயலி பதிவு மிகவும் எளிமையானது, கடவுச்சொல் மற்றும் உறுதிப்படுத்தல் கடவுச்சொல்லுடன் OTP சரிபார்ப்பைக் கொண்டுள்ளது. பயனர் தங்கள் சொந்த கணக்கையும் நீக்கலாம்.
