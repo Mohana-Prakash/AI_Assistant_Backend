@@ -124,7 +124,7 @@ const collectionPromise = getCollection();
 // Simple in-memory cache: { questionText: answerText }
 const questionCache = {};
 
-app.post("/chat", async (req, res) => {
+app.post("/api/chat", async (req, res) => {
   try {
     const { question } = req.body;
 
