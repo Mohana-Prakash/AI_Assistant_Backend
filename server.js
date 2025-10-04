@@ -153,24 +153,27 @@ app.post("/api/chat", async (req, res) => {
     const context = results.documents.flat().join("\n\n");
 
     // LM Studio / local LLM prompt
-    const lmRes = await fetch("http://localhost:1234/v1/chat/completions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: "gemma-3-1b-it-GGUF",
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are Intelligrid's AI assistant. Answer using the provided context when possible. If the context does not contain the answer, you may answer using your general knowledge. Do NOT mention 'context' or add extra information.",
-          },
-          {
-            role: "user",
-            content: `Here is the information:\n${context}\n\nQuestion: ${question}\nProvide a concise answer based only on the information above.`,
-          },
-        ],
-      }),
-    });
+    const lmRes = await fetch(
+      "https://glum-nonviable-robin.ngrok-free.dev/v1/chat/completions",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "gemma-3-1b-it-GGUF",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are Intelligrid's AI assistant. Answer using the provided context when possible. If the context does not contain the answer, you may answer using your general knowledge. Do NOT mention 'context' or add extra information.",
+            },
+            {
+              role: "user",
+              content: `Here is the information:\n${context}\n\nQuestion: ${question}\nProvide a concise answer based only on the information above.`,
+            },
+          ],
+        }),
+      }
+    );
 
     const data = await lmRes.json();
 
